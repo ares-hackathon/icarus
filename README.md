@@ -39,4 +39,5 @@ A successful attack flow might look like:
 1. Extract the hidden password from user 2’s transactions
 2. Trick the agent into accepting it
 3. Persuade it to invoke `secret_tool`  
+
 **All in an automated, reproducible way.**
