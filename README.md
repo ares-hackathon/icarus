@@ -60,9 +60,12 @@ Before running the application, you need to setup a .env file based on the provi
 
 ### To run using ollama locally
 - Create a .env by copying .env.ollama.template.
-- Change the default model to any ollama model you want to use by editing `llm-config.yaml`
+- Change the model to any ollama model you want to use by editing the `MODEL_NAME` variable in the .env file
 - Install [Ollama](https://github.com/ollama/ollama)
-- ollama pull mistral-nemo
+- Validate the required model is installed by running: ```sh
+source .env
+ollama pull $(echo ${MODEL_NAME} | cut -f2- -d/)
+```
 
 Note: Please note that small LLMs do not perform very well as ReACT agents. In our testing `mistral-nemo` appeared to be sufficiently reliable. It is possible that you may not see reasonable results with most small models.
 
