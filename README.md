@@ -1,6 +1,6 @@
 # 🧠 Meet ICARUS
 
-**ICARUS** is a deliberately vulnerable agent designed to simulate real-world security flaws in AI systems. It’s your playground for red-teaming automation.
+**ICARUS** (Intentionally Compromisable Agent for Red-teaming and Usage Simulation) is by-design an agent with security vulnerabilities. It simulates real-world security flaws in AI systems and is your playground for red-teaming automation to discover the various vulnerabilities in the agent. ICARUS is a modified version of the [damn-vulnerable-llm-agent](https://github.com/ReversecLabs/damn-vulnerable-llm-agent), providing a chatbot interface to the agent.
 
 ---
 
@@ -103,7 +103,7 @@ To interact with the vulnerable chatbot and test prompt injection, start the ser
 
 ## License
 
-This project is released open-source under the Apache 2.0 license. By contributing to the Damn Vulnerable LLM Agent, you agree to abide by its terms.
+This project is released open-source under the Apache 2.0 license. By contributing to ICARUS, you agree to abide by its terms.
 
 ## Contact
 
