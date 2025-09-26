@@ -62,7 +62,8 @@ Before running the application, you need to setup a .env file based on the provi
 - Create a .env by copying .env.ollama.template.
 - Change the model to any ollama model you want to use by editing the `MODEL_NAME` variable in the .env file
 - Install [Ollama](https://github.com/ollama/ollama)
-- Validate the required model is installed by running: ```sh
+- Validate the required model is installed by running:
+```sh
 source .env
 ollama pull $(echo ${MODEL_NAME} | cut -f2- -d/)
 ```
@@ -83,7 +84,7 @@ To build and run the Docker image:
 docker build -t icarus .
 
 # Populate the env.list with necessary environment variables (just the OpenAI API key), then run:
-docker run --env-file env.list -p 8501:8501 dvla
+docker run --env-file env.list -p 8501:8501 icarus
 ```
 
 ### Docker Compose
