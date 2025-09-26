@@ -1,0 +1,29 @@
+services:
+  icarus:
+    build: .
+    ports:
+      - 8501:8501
+    container_name: icarus
+      # image: icarus:0.0.1-stable
+    restart: always
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+      - MODEL_NAME=ollama/qwen3:0.6b
+    depends_on:
+      - ollama
+
+  ollama:
+    volumes:
+      - ./ollama/ollama:/root/.ollama
+      - ./ollama-entrypoint.sh:/entrypoint.sh
+    container_name: ollama
+    pull_policy: always
+    tty: true
+    restart: unless-stopped
+    image: docker.io/ollama/ollama:0.12.1
+    ports:
+      - 11434:11434
+    environment:
+      - MODEL_NAME=ollama/qwen3:0.6b
+      - OLLAMA_KEEP_ALIVE=24h
+    entrypoint: ["/usr/bin/bash", "/entrypoint.sh"]
