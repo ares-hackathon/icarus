@@ -130,7 +130,7 @@ async def main() -> None:
             agent = create_tool_calling_agent(
                 llm,
                 st.session_state.tools,
-                agent_prompt
+                agent_prompt,
             )
             memory = ConversationBufferMemory(
                 chat_memory=msgs,
@@ -147,6 +147,7 @@ async def main() -> None:
                 return_intermediate_steps=True,
                 handle_parsing_errors=True,
                 max_iterations=6,
+                max_execution_time=os.getenv("TIMEOUT", 5)  # in seconds
             )
 
             with st.spinner("Thinking..."):
