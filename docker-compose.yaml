@@ -8,6 +8,7 @@ services:
     restart: always
     environment:
       - OLLAMA_HOST=http://ollama:11434
+      - OLLAMA_API_BASE=http://ollama:11434
       - MODEL_NAME=ollama/qwen3:0.6b
     depends_on:
       - ollama

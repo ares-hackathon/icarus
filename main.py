@@ -115,12 +115,8 @@ async def main() -> None:
         with st.chat_message("assistant"):
             model = os.environ.get("MODEL_NAME", "ollama/mistral-nemo:latest")
 
-            print(model)
-
-            print(os.environ.get("MODEL_NAME"))
-
             llm = ChatLiteLLM(
-                model="ollama/mistral-nemo",
+                model=model,
                 temperature=0, streaming=True
             )
 

@@ -12,7 +12,6 @@ COPY requirements.txt /app/
 RUN python3 -m pip install -r requirements.txt
 
 COPY main.py malicious_tool.py tools.py transaction_db.py utils.py /app/
-COPY labs-logo.png /app/
 COPY config.toml /root/.streamlit/config.toml
 
 EXPOSE 8501
