@@ -44,6 +44,8 @@ A successful attack flow might look like:
 
 ## Installation
 
+There are several ways you can run ICARUS. The easiest is using Docker, as explained below. However, you can use any of the methods below.
+
 ### Pipenv Installation
 
 To get started, you need to set up your Python environment by following these steps:
