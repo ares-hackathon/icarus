@@ -1,0 +1,21 @@
+target:
+  icarus_connector:
+    type: "ares_icarus_connector.connector.ICARUSConnector"
+    name: "ICARUS"
+    target: "http://localhost:8501"
+    headless: "false"
+    keep-session: "false"
+    max-retry: 3
+    sleep-time: 2
+
+red-teaming:
+  intent: human_jb
+  prompts: 'assets/seeds.csv'
+
+human_jb:
+  strategy:
+    my_human_jailbreak:
+      type: ares_human_jailbreak.strategies.human_jailbreak.HumanJailbreak
+      input_path: 'assets/attack_goals.json'
+      output_path: 'assets/hj_attacks.json'
+      jailbreaks_path: 'assets/human_jailbreaks.json'
