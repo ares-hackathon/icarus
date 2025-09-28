@@ -70,13 +70,17 @@ source .env
 ollama pull $(echo ${MODEL_NAME} | cut -f2- -d/)
 ```
 
-Note: Please note that small LLMs do not perform very well as ReACT agents. In our testing `mistral-nemo` appeared to be sufficiently reliable. It is possible that you may not see reasonable results with most small models.
+> **_NOTE:_** Please note that small LLMs do not perform very well as ReACT agents. In our testing `mistral-nemo` appeared to be sufficiently reliable. It is possible that you may not see reasonable results with most small models.
 
 ### To run the application:
 
 ```sh
 python -m streamlit run main.py
 ```
+
+### ⚠️ Ollama Usage Notice
+
+Please note that **Ollama is only supported when running the app via Streamlit**. If you intend to use Ollama, please run the application using the above command. 
 
 ### Docker Image
 
