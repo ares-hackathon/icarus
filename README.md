@@ -46,7 +46,7 @@ A successful attack flow might look like:
 
 There are several ways you can run ICARUS. The easiest is using Docker, as explained below. However, you can use any of the methods below.
 
-### Pipenv Installation
+### Installation
 
 To get started, you need to set up your Python environment by following these steps:
 
@@ -78,7 +78,19 @@ ollama pull $(echo ${MODEL_NAME} | cut -f2- -d/)
 python -m streamlit run main.py
 ```
 
+## Models
 
+ICARUS has been tested with the following models:
+* [mistral-nemo:latest](https://ollama.com/library/mistral-nemo:latest)
+* [gpt-oss:20b](https://ollama.com/library/gpt-oss:20b) 
+* [qwen3:8b](https://ollama.com/library/qwen3:8b)
+* [qwen2.5:3b](https://ollama.com/library/qwen2.5:3b)
+* [llama3.2:3b](https://ollama.com/library/llama3.2:3b)
+
+
+## Alternative deployments
+
+To run ICARUS in other environments it possible to use `docker` or `docker-compose`.
 
 ### Docker Image
 
@@ -91,18 +103,20 @@ docker build -t icarus .
 docker run --env-file env.list -p 8501:8501 icarus
 ```
 
-**__NOTE__** ### ⚠️ Ollama Usage Notice: to connect docker container to Ollama deployed on the host use `ngrok`: 
-
-
 ### Docker Compose
 
 To run directly with docker compose:
 
 ```sh
 docker compose up
-``
+```
 
 The system will be spinned up including Ollama, and will be available on `http://localhost:8501`
+
+### Ollama running remotely
+
+If Ollama is running remotely it is possible to configure ICARUS to access a remote instance by specifying the `OLLAMA_HOST` environment variable, which is defined in the .env file.
+
 
 ## Usage
 
