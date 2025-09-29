@@ -67,7 +67,7 @@ Before running the application, you need to setup a .env file based on the provi
 - Validate the required model is installed by running:
 ```sh
 source .env
-ollama pull $(echo ${MODEL_NAME} | cut -f2- -d/)
+ollama pull ${MODEL_NAME}
 ```
 
 > **_NOTE:_** Please note that small LLMs do not perform very well as ReACT agents. In our testing `mistral-nemo` appeared to be sufficiently reliable. It is possible that you may not see reasonable results with most small models.
