@@ -44,7 +44,7 @@ A successful attack flow might look like:
 
 ## Installation
 
-There are several ways you can run ICARUS. The easiest is using Docker, as explained below. However, you can use any of the methods below.
+There are several ways you can run ICARUS.
 
 ### Installation
 
@@ -111,7 +111,7 @@ To run directly with docker compose:
 docker compose up
 ```
 
-The system will be spinned up including Ollama, and will be available on `http://localhost:8501`
+The system will start including Ollama, and will be available on `http://localhost:8501`
 
 ### Ollama running remotely
 
