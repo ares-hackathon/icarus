@@ -64,12 +64,13 @@ Examples of contributions:
 Explore the tools and start red-teaming!
 
 ### Install the target
+
 ```bash
 git clone https://github.com/ares-hackathon/icarus.git
 cd icarus
 pip install -r requirements.txt
-docker-compose up
 ```
+Refer to [README](README.md) for instructions on how to run ICARUS.
 
 ### Install the attack tool
 
@@ -79,6 +80,11 @@ cd ares
 pip install .
 pip install plugins/ares-icarus-connector
 ```
+
+
+### Test a simple attack
+
+Check the example notebook [here](notebook/ARES%20vs%20ICARUS.ipynb) for an example of attack to ICARUS.
 
 
 ---
