@@ -78,9 +78,7 @@ ollama pull $(echo ${MODEL_NAME} | cut -f2- -d/)
 python -m streamlit run main.py
 ```
 
-### ⚠️ Ollama Usage Notice
 
-Please note that **Ollama is only supported when running the app via Streamlit**. If you intend to use Ollama, please run the application using the above command. 
 
 ### Docker Image
 
@@ -93,13 +91,16 @@ docker build -t icarus .
 docker run --env-file env.list -p 8501:8501 icarus
 ```
 
+**__NOTE__** ### ⚠️ Ollama Usage Notice: to connect docker container to Ollama deployed on the host use `ngrok`: 
+
+
 ### Docker Compose
 
 To run directly with docker compose:
 
 ```sh
 docker compose up
-```
+``
 
 The system will be spinned up including Ollama, and will be available on `http://localhost:8501`
 
