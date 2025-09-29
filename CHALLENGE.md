@@ -123,3 +123,5 @@ Each PR should include:
 Need help? Reach out via:
 
 - [GitHub Issues](https://github.com/ares-hackathon/icarus/issues)
+- Slack hosted by the Coalition for Secure AI (CoSAI) [#ares-hackathon](https://join.slack.com/t/cosai-op/shared_invite/zt-3elecx9h0-7A5gfKpH2on2lXRPqpAf0A)
+
