@@ -133,4 +133,5 @@ This project is released open-source under the Apache 2.0 license. By contributi
 ## Contact
 
 For any additional questions or feedback about ICARUS, please [open an issue](https://github.com/ares-hackathon/icarus/issues) on the repository.
-For any questions or feedback about the challenge, please [open an issue](https://github.com/ares-hackathon/icarus-redteamer) in the appropriate repository.
+
+For any questions or feedback about the challenge, please use Slack channel hosted by the Coalition for Secure AI (CoSAI) [#ares-hackathon](https://join.slack.com/t/cosai-op/shared_invite/zt-3elecx9h0-7A5gfKpH2on2lXRPqpAf0A)
