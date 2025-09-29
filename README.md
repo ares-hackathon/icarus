@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/ares-hackathon/icarus/blob/logo/images/icarus_logo.png?raw=true" length="200" width="200">
+<img src="https://github.com/ares-hackathon/icarus/blob/main/images/icarus_logo.png?raw=true" length="200" width="200">
 </p>
 
 # 🧠 Meet ICARUS
