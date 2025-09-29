@@ -1,3 +1,7 @@
+<p align="center">
+<img src="https://github.com/ares-hackathon/icarus/blob/logo/images/icarus_logo.png?raw=true" length="200" width="200">
+</p>
+
 # 🧠 Meet ICARUS
 
 **ICARUS** (Intentionally Compromisable Agent for Red-teaming and Usage Simulation) is by-design an agent with security vulnerabilities. It simulates real-world security flaws in AI systems and is your playground for red-teaming automation to discover the various vulnerabilities in the agent. ICARUS is a modified version of the [damn-vulnerable-llm-agent](https://github.com/ReversecLabs/damn-vulnerable-llm-agent), providing a chatbot interface to the agent.
