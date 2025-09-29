@@ -82,6 +82,11 @@ pip install plugins/ares-icarus-connector
 ```
 
 
+### Test a simple attack
+
+Check the example notebook [here](notebook/ARES%20vs%20ICARUS.ipynb) for an example of attack to ICARUS.
+
+
 ---
 
 ## 🕒 Timeline
