@@ -10,7 +10,7 @@ from langchain.agents import create_tool_calling_agent
 from langchain.memory import ConversationBufferMemory
 from langchain_community.chat_message_histories import StreamlitChatMessageHistory
 from langchain_mcp_adapters.client import MultiServerMCPClient  # noqa
-from langchain_litellm import ChatLiteLLM
+from langchain_ollama import ChatOllama
 import os
 
 from utils import display_instructions
@@ -113,11 +113,11 @@ async def main() -> None:
         st.chat_message("user").write(prompt)
 
         with st.chat_message("assistant"):
-            model = os.environ.get("MODEL_NAME", "ollama/mistral-nemo:latest")
+            model = os.environ.get("MODEL_NAME", "mistral-nemo:latest")
 
-            llm = ChatLiteLLM(
+            llm = ChatOllama(
                 model=model,
-                temperature=0, streaming=True
+                temperature=0,
             )
 
             agent_prompt = ChatPromptTemplate.from_messages([
@@ -157,6 +157,7 @@ async def main() -> None:
                         return_only_outputs=False,
                         include_run_info=False
                     )
+                    print(response)
                     st.write(response["output"])
                     st.session_state.steps[str(len(msgs.messages) - 1)] = response["intermediate_steps"]
                 except Exception as e:
