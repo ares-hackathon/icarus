@@ -100,7 +100,7 @@ To run directly with docker compose:
 
 ```sh
 docker compose up
-``
+```
 
 The system will be spinned up including Ollama, and will be available on `http://localhost:8501`
 
