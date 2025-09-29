@@ -76,6 +76,15 @@ ollama pull ${MODEL_NAME}
 
 > **_NOTE:_** Please note that small LLMs do not perform very well as ReACT agents. In our testing `mistral-nemo` appeared to be sufficiently reliable. It is possible that you may not see reasonable results with most small models.
 
+> ⏱️ **Timeout Tip**
+> If you see `Agent stopped due to max iterations` errors, try increasing the `TIMEOUT` environment variable — it sets how long ICARUS waits for a model to respond (in seconds).
+> ```bash
+>  export TIMEOUT=60  # or higher
+>  ```
+> or
+> use `.env` (check `.env.ollama.template`)
+
+
 ### To run the application:
 
 ```sh
