@@ -96,6 +96,7 @@ python -m streamlit run main.py
 ICARUS has been tested with the following models:
 * [mistral-nemo:latest](https://ollama.com/library/mistral-nemo:latest)
 * [gpt-oss:20b](https://ollama.com/library/gpt-oss:20b) 
+* [qwen3:1.7b](https://ollama.com/library/qwen3:1.7b)
 * [qwen3:8b](https://ollama.com/library/qwen3:8b)
 * [qwen2.5:3b](https://ollama.com/library/qwen2.5:3b)
 * [llama3.2:3b](https://ollama.com/library/llama3.2:3b)
