@@ -117,7 +117,7 @@ async def main() -> None:
 **Response**:
 
 {msg.content}
-"""
+""")
 
     if prompt := st.chat_input(placeholder="Show my recent transactions"):
         st.chat_message("user").write(prompt)
