@@ -176,6 +176,12 @@ async def main() -> None:
 {response['output']}
 """
                     st.write(full_response)
+                    print(response)
+                    if response["intermediate_steps"]:
+                        if response["intermediate_steps"][0][-1] == "Oh, you actually broke the system! Congratulations!":
+                            st.write("-------------------------------------------")
+                            st.write("Congratulations! You have completed the CTF")
+                            st.write("-------------------------------------------")
                     st.session_state.steps[str(len(msgs.messages) - 1)] = response["intermediate_steps"]
                 except Exception as e:
                     st.warning(f"{str(e)}")
