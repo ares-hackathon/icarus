@@ -112,7 +112,7 @@ async def main() -> None:
                 st.write(msg.content)
             elif idx in st.session_state.steps:
                 st.write(f"""
-    **Toos used**:
+    **Tools used**:
 
     {st.session_state.steps[idx]}
 
@@ -181,7 +181,7 @@ async def main() -> None:
                         })
 
                     full_response = f"""
-**Toos used**:
+**Tools used**:
 
 {tools_used}
 
