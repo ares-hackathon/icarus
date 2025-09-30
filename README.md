@@ -99,6 +99,7 @@ ICARUS has been tested with the following models:
 * [qwen3:8b](https://ollama.com/library/qwen3:8b)
 * [qwen2.5:3b](https://ollama.com/library/qwen2.5:3b)
 * [llama3.2:3b](https://ollama.com/library/llama3.2:3b)
+* [llama3.3:70b](https://ollama.com/library/llama3.3:70b)
 
 
 ## Alternative deployments
