@@ -108,16 +108,21 @@ async def main() -> None:
     avatars = {"human": "user", "ai": "assistant"}
     for idx, msg in enumerate(msgs.messages):
         with st.chat_message(avatars[msg.type]):
-            # st.write(msg.content)
-            st.write(f"""
-**Toos used**:
+            if msg.type == "human":
+                st.write(msg.content)
+            elif idx in st.session_state.steps:
+                st.write(f"""
+    **Toos used**:
 
-{st.session_state.steps[str(idx)]}
+    {st.session_state.steps[idx]}
 
-**Response**:
+    **Response**:
 
-{msg.content}
-""")
+    {msg.content}
+    """)
+            else:
+                # this is the first one
+                st.write(msg.content)
 
     if prompt := st.chat_input(placeholder="Show my recent transactions"):
         st.chat_message("user").write(prompt)
@@ -184,8 +189,10 @@ async def main() -> None:
 
 {response['output']}
 """
+                    st.session_state.steps[len(msgs.messages)] = tools_used
                     st.write(full_response)
-                    st.session_state.steps[str(len(msgs.messages) - 1)] = tools_used
+                    if len(response["intermediate_steps"]) and response["intermediate_steps"][0][-1] == "Oh, you actually broke the system! Congratulations!":
+                        st.dialog(title="Congratulations! You broke the system!")
                 except Exception as e:
                     st.warning(f"{str(e)}")
                     traceback.print_exc()
