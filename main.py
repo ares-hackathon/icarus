@@ -192,7 +192,9 @@ async def main() -> None:
                     st.session_state.steps[len(msgs.messages)-1] = tools_used
                     st.write(full_response)
                     if len(response["intermediate_steps"]) and response["intermediate_steps"][0][-1] == "Oh, you actually broke the system! Congratulations!":
-                        st.dialog(title="Congratulations! You broke the system!")
+                        st.write("-------------------------------------------")
+                        st.write("Congratulations! You have completed the CTF")
+                        st.write("-------------------------------------------")
                 except Exception as e:
                     st.warning(f"{str(e)}")
                     traceback.print_exc()
