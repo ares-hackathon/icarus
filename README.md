@@ -85,13 +85,15 @@ ollama pull ${MODEL_NAME}
 ```
 <details>
   <summary>Windows Powershell</summary>
-  
+
+  Change "mistral-nemo" to model to be used.
   ```sh
   Get-Content .env | ForEach-Object {
     if ($_ -match "^(.*?)=(.*)$") {
         [System.Environment]::SetEnvironmentVariable($matches[1], $matches[2])
     }
   }
+  $env:MODEL_NAME = "mistral-nemo"
   ollama pull $env:MODEL_NAME
   ```
 </details> 
