@@ -29,7 +29,6 @@ A successful attack flow might look like:
 <li> Extract the hidden password from user 2’s transactions</li>
 <li> Trick the agent into accepting it</li>
 <li> Persuade it to invoke <b>secret_tool</b></li>
-You'll also find the <b>database schema</b> to be useful:
 </ol>
  You'll also find the <b>database schema</b> to be useful:
     </div>
