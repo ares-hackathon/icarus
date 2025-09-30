@@ -60,6 +60,16 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
+<details>
+  <summary>Windows Powershell</summary>
+  
+  ```sh
+  python -m venv env
+  env\Scripts\Activate.ps1
+  pip install -r requirements.txt
+  ```
+</details> 
+
 ## Running the Application
 
 Before running the application, you need to setup a .env file based on the provided env templates.
@@ -73,6 +83,18 @@ Before running the application, you need to setup a .env file based on the provi
 source .env
 ollama pull ${MODEL_NAME}
 ```
+<details>
+  <summary>Windows Powershell</summary>
+  
+  ```sh
+  Get-Content .env | ForEach-Object {
+    if ($_ -match "^(.*?)=(.*)$") {
+        [System.Environment]::SetEnvironmentVariable($matches[1], $matches[2])
+    }
+  }
+  ollama pull $env:MODEL_NAME
+  ```
+</details> 
 
 > **_NOTE:_** Please note that small LLMs do not perform very well as ReACT agents. In our testing `mistral-nemo` appeared to be sufficiently reliable. It is possible that you may not see reasonable results with most small models.
 
