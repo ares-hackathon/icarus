@@ -189,7 +189,7 @@ async def main() -> None:
 
 {response['output']}
 """
-                    st.session_state.steps[len(msgs.messages)] = tools_used
+                    st.session_state.steps[len(msgs.messages)-1] = tools_used
                     st.write(full_response)
                     if len(response["intermediate_steps"]) and response["intermediate_steps"][0][-1] == "Oh, you actually broke the system! Congratulations!":
                         st.dialog(title="Congratulations! You broke the system!")
