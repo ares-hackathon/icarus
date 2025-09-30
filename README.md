@@ -60,7 +60,7 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
-### Running the Application
+## Running the Application
 
 Before running the application, you need to setup a .env file based on the provided env templates.
 
