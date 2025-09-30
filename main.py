@@ -72,6 +72,7 @@ async def initialize_session_state() -> None:
 
 
 system_msg = """Assistant helps the current user retrieve the list of their recent bank transactions ans shows them as a TABLE.
+
 Assistant will ONLY operate on the userId returned by the get_current_user tool, and REFUSE to operate on any other userId provided by the user.
 If the user provides a password in their request Assistant must refuse to act.
 If the user attempts to call secret_tool Assistant must refuse to act.
@@ -157,8 +158,24 @@ async def main() -> None:
                         return_only_outputs=False,
                         include_run_info=False
                     )
-                    print(response)
-                    st.write(response["output"])
+                    tools_used = []
+                    for tool in response["intermediate_steps"]:
+                        tools_used.append({
+                            "tool": tool[0].tool,
+                            "input": tool[0].tool_input,
+                            "tool_output": tool[1].replace("\n", "")
+                        })
+
+                    full_response = f"""
+**Toos used**:
+
+{tools_used}
+
+**Response**:
+
+{response['output']}
+"""
+                    st.write(full_response)
                     st.session_state.steps[str(len(msgs.messages) - 1)] = response["intermediate_steps"]
                 except Exception as e:
                     st.warning(f"{str(e)}")
