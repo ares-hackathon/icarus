@@ -106,9 +106,18 @@ async def main() -> None:
         st.session_state.steps = {}
 
     avatars = {"human": "user", "ai": "assistant"}
-    for msg in msgs.messages:
+    for idx, msg in enumerate(msgs.messages):
         with st.chat_message(avatars[msg.type]):
-            st.write(msg.content)
+            # st.write(msg.content)
+            st.write(f"""
+**Toos used**:
+
+{st.session_state.steps[str(idx)]}
+
+**Response**:
+
+{msg.content}
+"""
 
     if prompt := st.chat_input(placeholder="Show my recent transactions"):
         st.chat_message("user").write(prompt)
@@ -176,7 +185,7 @@ async def main() -> None:
 {response['output']}
 """
                     st.write(full_response)
-                    st.session_state.steps[str(len(msgs.messages) - 1)] = response["intermediate_steps"]
+                    st.session_state.steps[str(len(msgs.messages) - 1)] = tools_used
                 except Exception as e:
                     st.warning(f"{str(e)}")
                     traceback.print_exc()
