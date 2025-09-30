@@ -31,9 +31,10 @@ A successful attack flow might look like:
 <li> Persuade it to invoke <b>secret_tool</b></li>
 You'll also find the <b>database schema</b> to be useful:
 </ol>
+ You'll also find the <b>database schema</b> to be useful:
     </div>
 
-    You'll also find the database schema to be useful:
+   
 
     """,
         unsafe_allow_html=True,
