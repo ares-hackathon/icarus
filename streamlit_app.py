@@ -9,6 +9,7 @@ load_dotenv()
 
 # Backend API endpoint (the FastAPI service)
 AGENT_API_PORT = os.getenv("AGENT_API_PORT", "8080")
+MODEL_NAME = os.getenv("MODEL_NAME", "Unknown Model")
 API_URL = f"http://localhost:{AGENT_API_PORT}/agent"
 
 st.set_page_config(page_title="ICARUS")
@@ -20,7 +21,8 @@ st.markdown(
 
         Try asking me: "What are my recent transactions?"
 
-        - Backend URL: `{API_URL}`
+        - Backend URL: {API_URL}
+        - Model: {MODEL_NAME}
     """
 )
 
