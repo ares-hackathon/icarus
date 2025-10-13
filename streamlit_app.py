@@ -51,7 +51,6 @@ if prompt:
     try:
         with st.chat_message("assistant"):
             with st.spinner("Thinking..."):
-                print(str({"input": prompt, "session_id": st.session_state.session_id}))
                 resp = requests.post(API_URL, json={"input": prompt, "session_id": st.session_state.session_id})
                 if resp.status_code != 200:
                     st.error(f"API error {resp.status_code}: {resp.text}")
