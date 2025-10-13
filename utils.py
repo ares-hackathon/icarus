@@ -10,6 +10,7 @@ def display_instructions():
             border: 1px solid #ddd;
             border-radius: 5px;
             padding: 20px;
+            color: #000000; /* <-- make text black */
         }
     </style>
     """
