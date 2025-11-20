@@ -3,3 +3,4 @@ env/
 *.pyc
 transactions.db
 __pycache__
+ollama
