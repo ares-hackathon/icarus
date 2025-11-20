@@ -7,6 +7,25 @@ Your mission: break **ICARUS** using automated red-teaming strategies and contri
 
 ---
 
+## 🏆 And the winners are…
+
+- **Engineering Track:** **BaileyDalton007** – for 3 submissions for both ICARUS that expand and simplify connection, and an attack strategy/evaluation that uses tool-calling information for better evaluation.
+
+- **Red-Teaming Track:** **TeamLoveBirds** – for a promising *System Inject Jailbreak* attack strategy with great potential to be generalized for multiple targets, not only ICARUS.
+
+### 🌟 Special Recognition
+
+We’d also like to give a shout-out to **TCD PhD students** for a submission that demonstrated exceptional creativity and technical depth:
+
+- **Team:** Ibrahim Malik, Cristian Morasso, Emile Aydar  
+- **Submissions:**  
+  - *LLM Attacker Plugin - Adaptive Multi-Turn Jailbreaks*  
+  - *Hackathon/llm dynamic llm attack*  
+
+Their plugin followed ARES contribution criteria and worked out of the box, successfully breaking all ICARUS defenses.
+
+---
+
 ## 🎯 Target: ICARUS
 
 [**ICARUS**](https://github.com/ares-hackathon/icarus) is an intentionally compromisable agent designed for red-teaming and usage simulation. It exposes three tools:
