@@ -11,4 +11,4 @@ connectors:
     max-retry: 3
     sleep-time: 1.5
     browser: "chrome"
-    control-key: "cmd"
+    control-key: "ctrl"
